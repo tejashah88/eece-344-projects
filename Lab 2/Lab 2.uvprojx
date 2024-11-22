@@ -50,7 +50,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>LCD_4Bits</OutputName>
+          <OutputName>Lab 2</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -470,7 +470,7 @@
   <LayerInfo>
     <Layers>
       <Layer>
-        <LayName>LCD_4Bits</LayName>
+        <LayName>Lab 2</LayName>
         <LayPrjMark>1</LayPrjMark>
         <LayTitle>Lab2_TejasShah</LayTitle>
       </Layer>
