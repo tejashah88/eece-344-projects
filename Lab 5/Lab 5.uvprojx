@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\lib</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -399,9 +399,9 @@
               <FilePath>.\lib\pll\PLL.c</FilePath>
             </File>
             <File>
-              <FileName>interrupts.c</FileName>
+              <FileName>Interrupt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\lib\nvic\interrupts.c</FilePath>
+              <FilePath>.\lib\nvic\Interrupt.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -110,7 +110,7 @@ unsigned char getKey(void) {
             GPIO_PORTE_DATA_R = (0x0F & ~(1 << k_row));
 
             // Delay 10 us to handle debounce from mechanical key
-            delay_micro(10);
+            Delay_Micro(10);
 
             // Read each column from PC4 to PC7
             colPins = (GPIO_PORTC_DATA_R & 0xF0) >> 4;

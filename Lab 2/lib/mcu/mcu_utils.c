@@ -5,7 +5,7 @@
 ///////////////////////
 
 /* Delay by 'n' microseconds (16 MHz CPU clock) */
-void delay_micro(int n) {
+void Delay_Micro(int n) {
 	int i, j;
 	for (i=0; i<n; i++) {
 		for(j=0;j<3;j++)
@@ -14,7 +14,7 @@ void delay_micro(int n) {
 }
 
 /* Delay by 'n' milliseconds (16 MHz CPU clock) */
-void delay_milli(int n) {
+void Delay_Milli(int n) {
 	int i, j;
 	for (i=0; i<n; i++) {
 		for(j=0;j<3180;j++)

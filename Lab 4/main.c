@@ -1,6 +1,6 @@
 /*
  * Reference material:
- * - MPU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
+ * - MCU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
  * - Suplimental info: https://web2.qatar.cmu.edu/cs/15348/lectures/Lecture03.pdf
  *
  * Useful info:
@@ -23,16 +23,17 @@
 #define INPUT_DOOR_BUTTONS    0xC0u // = 0x80 (PA7) | 0x40 (PA6)
 #define PORTA_WORKING_PINS    0xF8u // = 0x80 (PA7) | 0x40 (PA6) | 0x20 (PA5) | 0x10 (PA4) | 0x08 (PA3)
 
-void setup_port_a_pins(void);
 
-void SysTick_Wait200ms(uint32_t delay);
+// Function Declarations
+void Setup_Port_A_Pins(void);
+void SysTick_Wait_200ms(uint32_t delay);
 
 //////////////////////////
 // GPIO Setup functions //
 //////////////////////////
 
 
-void setup_port_a_pins(void) {
+void Setup_Port_A_Pins(void) {
     /* Enable Port A clock */
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
 
@@ -128,7 +129,7 @@ int main() {
     SysTick_Init();
 
     // Initialize GPIO pins
-    setup_port_a_pins();
+    Setup_Port_A_Pins();
 
     while (1) {
         // Set LED indicators based on current state

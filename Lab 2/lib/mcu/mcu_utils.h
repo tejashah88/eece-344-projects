@@ -2,8 +2,8 @@
 #define MCU_UTILS
 
 
-extern void delay_micro(int n);
-extern void delay_milli(int n);
+extern void Delay_Micro(int n);
+extern void Delay_Milli(int n);
 
 
 #endif /* MCU_UTILS */

@@ -1,6 +1,6 @@
 /*
  * Reference material:
- * - MPU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
+ * - MCU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
  * - Suplimental info: https://web2.qatar.cmu.edu/cs/15348/lectures/Lecture03.pdf
  *
  * Useful info:
@@ -23,14 +23,14 @@
 #define OUTPUT_LED_SEG_PINS	0xFFu // = 0x80 (PB7) | 0x40 (PB6) | 0x20 (PB5) | 0x10 (PB4) | 0x08 (PB3) | 0x04 (PB2) | 0x02 (PB1) | 0x01 (PB0)
 #define OUTPUT_DC_PWM_PIN   0x80u // = 0x80 (PA7)
 
-void setup_port_a_pins(void);
-void setup_port_b_pins(void);
+void Setup_Port_A_Pins(void);
+void Setup_Port_B_Pins(void);
 
 void SysTick_Wait_200ms(uint32_t delay);
 void SysTick_Wait_200us(uint32_t delay);
 
-void run_task_1(void);
-void run_task_2(void);
+void Run_Task_1(void);
+void Run_Task_2(void);
 
 
 //////////////////////////
@@ -38,7 +38,7 @@ void run_task_2(void);
 //////////////////////////
 
 
-void setup_port_a_pins(void) {
+void Setup_Port_A_Pins(void) {
     /* Enable Port A clock */
 	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
 
@@ -71,7 +71,7 @@ void setup_port_a_pins(void) {
 }
 
 
-void setup_port_b_pins(void) {
+void Setup_Port_B_Pins(void) {
     /* Enable Port B clock */
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R1;
 
@@ -177,8 +177,8 @@ int main() {
     SysTick_Init();
 
     // Initialize GPIO pins
-    setup_port_a_pins();
-    setup_port_b_pins();
+    Setup_Port_A_Pins();
+    Setup_Port_B_Pins();
 
     // Run all sub-tasks
     display_seg_7_countdown();

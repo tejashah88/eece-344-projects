@@ -238,8 +238,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\lib\nvic\interrupts.c</PathWithFileName>
-      <FilenameWithoutPath>interrupts.c</FilenameWithoutPath>
+      <PathWithFileName>.\lib\nvic\Interrupt.c</PathWithFileName>
+      <FilenameWithoutPath>Interrupt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

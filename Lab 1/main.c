@@ -1,6 +1,6 @@
 /*
  * Reference material:
- * - Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
+ * - MCU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
  * - Suplimental info: https://web2.qatar.cmu.edu/cs/15348/lectures/Lecture03.pdf
  *
  * Useful info:
@@ -50,14 +50,14 @@ const unsigned char SEG_7_PATTERNS[10] = {
 };
 
 /* Function declarations */
-void setup_port_a_pins(void);
-void setup_port_b_pins(void);
+void Setup_Port_A_Pins(void);
+void Setup_Port_B_Pins(void);
 
-void run_task_1(void);
-void run_task_2(void);
+void Run_Task_1(void);
+void Run_Task_2(void);
 
-void display_tens_digit(unsigned int n);
-void display_ones_digit(unsigned int n);
+void Display_Tens_Digit(unsigned int n);
+void Display_Ones_Digit(unsigned int n);
 
 void delayMs(int n);
 
@@ -65,7 +65,7 @@ void delayMs(int n);
 // Setup functions //
 /////////////////////
 
-void setup_port_a_pins(void) {
+void Setup_Port_A_Pins(void) {
     /* Enable Port A clock */
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
 
@@ -101,7 +101,7 @@ void setup_port_a_pins(void) {
 }
 
 
-void setup_port_b_pins(void) {
+void Setup_Port_B_Pins(void) {
     /* Enable Port B clock */
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R1;
 
@@ -147,7 +147,7 @@ void setup_port_b_pins(void) {
 * - Push Button: PA5
 * - Standalone LED: PA6
 */
-void run_task_1(void) {
+void Run_Task_1(void) {
 
     for (;;) {
         /* Check if input button is pressed or not via PA5 */
@@ -169,7 +169,7 @@ void run_task_1(void) {
  * - Digit Selectors: PA6 & PA7
  * - 7-segment LEDs: PB0 - PB7
  */
-void run_task_2(void) {
+void Run_Task_2(void) {
     unsigned int n = 0, counter = 0;
     unsigned int tens = 0, ones = 0;
 
@@ -185,13 +185,13 @@ void run_task_2(void) {
         }
 
         /* Display tens digit */
-        display_tens_digit(tens);
+        Display_Tens_Digit(tens);
 
         /* Delay for 5 ms will result in 10 ms per loop, making human eyes not detect on/off of thedisplay */
         delayMs(5);
 
         /* Display ones digit */
-        display_ones_digit(ones);
+        Display_Ones_Digit(ones);
 
         /* Delay 5 ms will result in 10 ms per loop */
         delayMs(5);
@@ -204,7 +204,7 @@ void run_task_2(void) {
 // Display functions //
 ///////////////////////
 
-void display_tens_digit(unsigned int n) {
+void Display_Tens_Digit(unsigned int n) {
     /* Drive pattern of first number on 7-segment LEDs */
     GPIO_PORTB_DATA_R = SEG_7_PATTERNS[n];
 
@@ -216,7 +216,7 @@ void display_tens_digit(unsigned int n) {
 }
 
 
-void display_ones_digit(unsigned int n) {
+void Display_Ones_Digit(unsigned int n) {
     /* Drive pattern of second number on 7-segment LEDs */
     GPIO_PORTB_DATA_R = SEG_7_PATTERNS[n];
 
@@ -251,15 +251,15 @@ void delayMs(int n)
 int main(void)
 {
     /* Setup phase */
-    setup_port_a_pins();
-    setup_port_b_pins();
+    Setup_Port_A_Pins();
+    Setup_Port_B_Pins();
 
     /* Running task phase */
     // NOTE: Change TASK_NUM above based on which lab task to run and recompile
 #if TASK_NUM == 1
-    run_task_1();
+    Run_Task_1();
 #elif TASK_NUM == 2
-    run_task_2();
+    Run_Task_2();
 #else
     return 0;
 #endif

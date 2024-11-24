@@ -1,6 +1,6 @@
 /*
  * Reference material:
- * - MPU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
+ * - MCU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
  * - Suplimental info: https://web2.qatar.cmu.edu/cs/15348/lectures/Lecture03.pdf
  *
  * Useful info:
@@ -18,36 +18,42 @@
 #include "lib/mcu/tm4c123gh6pm.h"
 #include "lib/pll/PLL.h"
 #include "lib/systick/SysTick.h"
+#include "lib/nvic/Interrupt.h"
 
-// GPIO Definitions
+// Task pin definitions
 #define INPUT_BUTTON_PINS	0x11u // = 0x10 (PF4) | 0x01 (PF0)
 #define OUTPUT_DAC_PIN		0xFFu // = 0x80 (PB7) | 0x40 (PB6) | 0x20 (PB5) | 0x10 (PB4) | 0x08 (PB3) | 0x04 (PB2) | 0x02 (PB1) | 0x01 (PB0)
 
+// Debug flags
+#define TEST_DAC_OUTPUTS 0  // Controls if the DEBUG stair voltage waveform is to be generated (see relevant function for more info)
 
 // Function Declarations
-void setup_port_f_pins(void);
-void setup_port_b_pins(void);
-void setup_global_interrupts(void);
+void Setup_Port_B_Pins(void);
+void Setup_Port_F_Pins(void);
+void Setup_Global_Interrupts(void);
+void SysTick_Wait_1ms(uint32_t delay);
 
-void generate_sawtooth_waveform_tick(int tick);
-void generate_sine_waveform_tick(int tick);
-void write_dac_output(unsigned char input);
+uint8_t DEBUG_Generate_Stair_Voltage_Waveform_Tick(int tick);
+uint8_t Generate_Sawtooth_Waveform_Tick(int tick);
+uint8_t Generate_Sine_Waveform_Tick(int tick);
 
 
 //////////////////////
 // Global Variables //
 //////////////////////
 
+
 // NOTE: Declaring a global variable 'volatile' flags it to the compiler that this variable
 // may be changed outside the obviously defined program flow (useful for interrupt handling).
 volatile int outputMode = 0;
 
-/////////////////////
-// Setup functions //
-/////////////////////
+
+//////////////////////////
+// GPIO Setup functions //
+//////////////////////////
 
 
-void setup_port_b_pins(void) {
+void Setup_Port_B_Pins(void) {
     /* Enable Port B clock */
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R1;
 
@@ -80,7 +86,7 @@ void setup_port_b_pins(void) {
 }
 
 
-void setup_port_f_pins(void) {
+void Setup_Port_F_Pins(void) {
     /* Enable Port F clock */
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5;
 
@@ -111,9 +117,9 @@ void setup_port_f_pins(void) {
     /* Enable pull-down resistors for input button pins (PF0 & PF4) */
     GPIO_PORTF_PUR_R |= INPUT_BUTTON_PINS;
 
-    /////////////////////
-    // Interrupt Setup //
-    /////////////////////
+    //////////////////////////////
+    // Interrupt-specific Setup //
+    //////////////////////////////
 
     // Set PF0 & PF4 to be edge sensitive
     GPIO_PORTF_IS_R  &= ~INPUT_BUTTON_PINS;
@@ -135,24 +141,53 @@ void setup_port_f_pins(void) {
 }
 
 
-void setup_global_interrupts(void) {
-    /* enable interrupt in NVIC and set priority to 5 */
-    NVIC_PRI7_R = (NVIC_PRI7_R & 0xFF00FFFF) | (3 << 21);     /* set interrupt priority to 5 */
-    NVIC_EN0_R |= (1 << 30);  /* enable IRQ30 (D30 of ISER[0]) */
+////////////////////////////
+// Global Interrupt Setup //
+////////////////////////////
 
-    __enable_irq(); /* global enable IRQs */
+
+void Setup_Global_Interrupts(void) {
+    // Set interrupt priority for Interrupt #30 (for GPIO Port F) to level 5 (Refer to Table 2-9 or pg. 104-106 in datasheet)
+    // Equivalent statement: NVIC_PRI7_R = (NVIC_PRI7_R & 0xFF00FFFF) | (5 << 21);
+    NVIC_SetPriorityIRQn(30, 5);
+
+    // Enable interrupt #30 (for GPIO Port F) (Refer to Table 2-9 or pg. 104-106 in datasheet)
+    // Equivalent statement: NVIC_EN0_R |= (1 << 30);
+    NVIC_EnableIRQn(30);
+
+    // Globally enable interrupt requests (IRQs)
+    // Equivalent assembly statement: "CPSIE I" (Change Processor State Interrupt Enable)
+    __enable_irq();
 }
+
+
+//////////////////////
+// Timing Functions //
+//////////////////////
+
+
+// Wait for delay x 1 ms via SysTick (assuming 50 MHz clock -> 1 cycle = 20 ns)
+void SysTick_Wait_1ms(uint32_t delay) {
+    uint32_t i;
+    for (i = 0 ; i < delay; i++) {
+        // Wait for duration of 50,000 * 20 ns
+        SysTick_Wait(50000);
+    }
+}
+
 
 ////////////////////////
 // Interrupt Handlers //
 ////////////////////////
 
 
+// NOTE: This is meant to be implicitly overriden
 void GPIOF_Handler(void) {
     volatile int readback;
 
     while (GPIO_PORTF_MIS_R != 0) {
-        // NOTE: You cannot have checks on multiple pins in 1 statement or it will not work (i.e. GPIO_PORTF_MIS_R & 0x11)
+        // NOTE: You cannot have checks on multiple pins in 1 statement or it will not work
+        //   (i.e. GPIO_PORTF_MIS_R & 0x11 will NOT work as expected)
         if ((GPIO_PORTF_MIS_R & 0x10) && (GPIO_PORTF_MIS_R & 0x01)) { // Have both SW1 (PF4) and SW2 (PF0) been pressed?
             // Don't display anything
             outputMode = 0;
@@ -179,25 +214,40 @@ void GPIOF_Handler(void) {
 }
 
 
-///////////////////
-// DAC Converter //
-///////////////////
-void generate_square_march_waveform_tick(int tick) {
+/////////////////////////
+// Waveform Generation //
+/////////////////////////
+
+
+// Debug function to verify the voltages for each segment of the DAC circuit
+// Output is a stair-like waveform, with each level shown on the oscilloscope per 60 milliseconds
+uint8_t DEBUG_Generate_Stair_Voltage_Waveform_Tick(int tick) {
     unsigned char t = (unsigned char) (tick / 60) % 8;
-    write_dac_output(1 << t);
-}
-
-void generate_sawtooth_waveform_tick(int tick) {
-    unsigned char t = (unsigned char) (tick % 256);
-    t = t/2;
-    write_dac_output(t);
+    return (1 << t);
 }
 
 
-void generate_sine_waveform_tick(int tick) {
-    // Formula: y = sin(2*pi*(t / T))
-    // T = period
+// Generates a sawtooth / right-triangle waveform, starting from 0 and rising to -3.3 V before repeating
+uint8_t Generate_Sawtooth_Waveform_Tick(int tick) {
+    // Resulting output range: [0, +255]
+    unsigned char y_output = (unsigned char) (tick % 256);
+
+    // HACK: For some reason, our DAC implementation was such that a 1/2 scaling factor was needed to
+    // prevent clipping, might be due to op-amp voltage power supply levels despite being set to +/- 5V...
+    // NOTE: If not needed, comment the following line out
+
+    // Resulting output range: [0, +127]
+    y_output = y_output / 2;
+
+    return y_output;
+}
+
+
+// Generates a sinusoidal waveform with a range from +0 V to -3.3 V and repeating a cycle every 60 ms
+uint8_t Generate_Sine_Waveform_Tick(int tick) {
+    // Formula: y = sin(2*pi*(t / T)), where T = length of full period
     unsigned char t = (unsigned char) (tick % 60);
+    unsigned char y_output;
     float y, y_shifted, y_scaled;
 
     // Resulting output range: [-1, +1]
@@ -207,49 +257,76 @@ void generate_sine_waveform_tick(int tick) {
     y_shifted = y + 1;
 
     // Resulting output range: [0, +1]
-    y_scaled = y_shifted / 2 / 2;
+    y_scaled = y_shifted / 2;
 
     // Resulting output range: [0, +255]
-    write_dac_output((unsigned char) (y_scaled * 255));
-}
+    y_output = (unsigned char) (y_scaled * 255);
 
+    // HACK: For some reason, our DAC implementation was such that a 1/2 scaling factor was needed to
+    // prevent clipping, might be due to op-amp voltage power supply levels despite being set to +/- 5V...
+    // NOTE: If not needed, comment the following line out
 
-void write_dac_output(unsigned char input) {
-    GPIO_PORTB_DATA_R = input;
+    // Resulting output range: [0, +127]
+    y_output = y_output / 2;
+
+    return y_output;
 }
 
 
 int main() {
     int tick = 0;
+    uint8_t dac_output;
 
     // Initialize PLL & SysTick
     PLL_Init(SYSDIV2_50_00_Mhz);
     SysTick_Init();
 
-    // Initialize GPIO for Ports F & B
-    setup_port_b_pins();
-    setup_port_f_pins();
+    // Initialize GPIO for Ports B & F
+    Setup_Port_B_Pins();
+    Setup_Port_F_Pins();
 
-    // Setup interrupts
-    setup_global_interrupts();
+    // Setup global interrupts for GPIO Port F
+    Setup_Global_Interrupts();
 
     while (1) {
-        switch (outputMode) {
-            case 0:
-                write_dac_output(0xFF);
-                break;
-            case 1:
-                generate_sawtooth_waveform_tick(tick);
-                break;
-            case 2:
-                generate_sine_waveform_tick(tick);
-                break;
-        }
+        #if TEST_DAC_OUTPUTS
+            // If the 'TEST_DAC_OUTPUTS' flag is set to 1, then we don't care about button inputs for the time being
+            // This function is meant for debugging the voltage outputs for every segment of the DAC individually
+            // If not desired, make sure to set to 0 and re-compile
+            dac_output = DEBUG_Generate_Stair_Voltage_Waveform_Tick(tick % 480);
+        #else
+            // Normal operation: The waveform generation works similar to a game engine by displaying the state of
+            // the waveform per tick. This allows as close to realtime switching of the waveform as you can get, but
+            // it also has the side-effect of seeing partial waveforms if the buttons are pressed during the middle
+            // of a waveform cycle. This is really meant to demonstrate the realtime responsiveness of the interrupts.
+            switch (outputMode) {
+                case 0:
+                    dac_output = 0x00;
+                    break;
+                case 1:
+                    dac_output = Generate_Sawtooth_Waveform_Tick(tick % 256);
+                    break;
+                case 2:
+                    dac_output = Generate_Sine_Waveform_Tick(tick % 60);
+                    break;
+                default:
+                    // NOTE: This should never happen but better safe than sorry
+                    dac_output = 0x00;
+                    break;
+            }
+        #endif
 
-        // NOTE: We make sure to reset the counter to 0 after every 3840 ms
-        // - 3840 / 256 = 15 full cycles of sawtooth
-        // - 3840 / 60 = 64 full cycles of sine
+        // Write the DAC output from the waveform generation directly to all pins on Port B
+        // NOTE: This assumes that PB7 is the MSB and PB0 is the LSB
+        GPIO_PORTB_DATA_R = dac_output;
+
+        // Make sure to reset the counter to 0 after every 3840 ms
+        // - 3840 / 256      = 15 full cycles of sawtooth waveform
+        // - 3840 / 60       = 64 full cycles of sine waveform
+        // - 3840 / (8 * 60) = 8 full cucles of DEBUG stair voltage waveform
         tick = (tick + 1) % 3840;
-        SysTick_Wait1ms(1);
+
+        // Delay for exactly 1 millisecond due to waveform generation logic
+        SysTick_Wait_1ms(1);
     }
 }

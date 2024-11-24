@@ -1,6 +1,6 @@
 /*
  * Reference material:
- * - MPU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
+ * - MCU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
  * - Suplimental info: https://web2.qatar.cmu.edu/cs/15348/lectures/Lecture03.pdf
  * - LCD Datasheet: https://www.sparkfun.com/datasheets/LCD/HD44780.pdf
  *
@@ -19,8 +19,8 @@
 #include "lcd/lcd_driver.h"
 #include "keypad/keypad_driver.h"
 
-void run_task_1(void);
-void run_task_2(void);
+void Run_Task_1(void);
+void Run_Task_2(void);
 
 /* Used for defining which task from the lab to run. Change number and recompile as necessary. */
 #define TASK_NUM 1
@@ -29,9 +29,9 @@ int main() {
     /* Running task phase */
     // NOTE: Change TASK_NUM above based on which lab task to run and recompile
 #if TASK_NUM == 1
-    run_task_1();
+    Run_Task_1();
 #elif TASK_NUM == 2
-    run_task_2();
+    Run_Task_2();
 #else
     return 0;
 #endif
@@ -56,7 +56,7 @@ int main() {
  *  - Data 2 pin: PB6
  *  - Data 3 pin: PB7
  */
-void run_task_1(void) {
+void Run_Task_1(void) {
     int i;
     char ch;
     const unsigned char DISPLAY_STRING[] = "HELLO WORLD";
@@ -71,7 +71,7 @@ void run_task_1(void) {
     LCD4Bits_Cmd(LCD_SET_DDRAM_ADDR + LCD_LINE1_START);
 
     // Allow some delay, so the slow LCD will catch up with the fast MCU.
-    delay_milli(500);
+    Delay_Milli(500);
 
     i = 0;
     while (DISPLAY_STRING[i] != '\0') {
@@ -81,7 +81,7 @@ void run_task_1(void) {
         LCD4Bits_Data(ch);
 
         // Allow some delay, so the slow LCD will catch up with the fast MCU.
-        delay_milli(500);
+        Delay_Milli(500);
 
         i++;
     }
@@ -112,7 +112,7 @@ void run_task_1(void) {
  *  - Column 3 pin: PC6
  *  - Column 4 pin: PC7
  */
-void run_task_2(void) {
+void Run_Task_2(void) {
     unsigned char key;
     int key_count = 0;
 
@@ -127,11 +127,11 @@ void run_task_2(void) {
     LCD4Bits_Cmd(LCD_SET_DDRAM_ADDR + LCD_LINE1_START);
 
     // Allow some delay, so the slow LCD will catch up with the fast MCU.
-    delay_milli(500);
+    Delay_Milli(500);
 
     for (;;) {
         key = getKey();	// call the function to get a key input
-        delay_milli(800);	// give the mechanic key some time to debounce.
+        Delay_Milli(800);	// give the mechanic key some time to debounce.
 
         if (key != 0) {
             key_count++;
@@ -148,7 +148,7 @@ void run_task_2(void) {
 
             // Display the key input on your LCD.
             LCD4Bits_Data(key);
-            delay_milli(500);
+            Delay_Milli(500);
         }
     }
 }

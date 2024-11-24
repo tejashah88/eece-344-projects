@@ -82,7 +82,7 @@ void LCD_Write4Bits(unsigned char data, unsigned char control) {
     GPIO_PORTB_DATA_R = (dataPacket | LCD_EN_ENABLE_MODE);
 
     // Allow some delay to let sent data be processed by LCD
-    delay_micro(3);
+    Delay_Micro(3);
 
     // Set back to the data without EN.
     GPIO_PORTB_DATA_R ^= LCD_EN_ENABLE_MODE;
@@ -104,9 +104,9 @@ void LCD4Bits_Cmd(unsigned char command) {
 
     // Allow some delay as specified from LCD datasheet
     if (command < 4)
-        delay_milli(2);
+        Delay_Milli(2);
     else
-        delay_micro(37);
+        Delay_Micro(37);
 }
 
 
@@ -115,5 +115,5 @@ void LCD4Bits_Data(unsigned char data) {
     LCD_Write8Bits_4BitMode(data, (LCD_RW_WRITE_MODE | LCD_RS_DATA_MODE));
 
     // Allow some delay as specified from LCD datasheet
-    delay_micro(37);
+    Delay_Micro(37);
 }
