@@ -27,6 +27,11 @@
 // Debug flags
 #define TEST_DAC_OUTPUTS 0  // Controls if the DEBUG stair voltage waveform is to be generated (see relevant function for more info)
 
+// Constant definitions
+#define SAWTOOTH_PERIOD 256
+#define SINE_PERIOD 60
+
+
 // Function Declarations
 void Setup_Port_B_Pins(void);
 void Setup_Port_F_Pins(void);
@@ -121,22 +126,22 @@ void Setup_Port_F_Pins(void) {
     // Interrupt-specific Setup //
     //////////////////////////////
 
-    // Set PF0 & PF4 to be edge sensitive
-    GPIO_PORTF_IS_R  &= ~INPUT_BUTTON_PINS;
+    // Set interrupt trigger for PF0 & PF4 to be edge sensitive
+    GPIO_PORTF_IS_R &= ~INPUT_BUTTON_PINS;
 
-    // Set trigger to NOT be fired from both edges
+    // Set interrupt trigger for PF0 & PF4 to NOT be fired from both edges
     GPIO_PORTF_IBE_R &= ~INPUT_BUTTON_PINS;
 
-    // Set pins to listen to the falling edge
+    // Set PF0 & PF4 to listen to falling edge
     GPIO_PORTF_IEV_R &= ~INPUT_BUTTON_PINS;
 
-    // Clear any prior interrupts
+    // Clear any prior interrupts for PF0 & PF4
     GPIO_PORTF_ICR_R |= INPUT_BUTTON_PINS;
 
-    // Unmask the interrupt
-    GPIO_PORTF_IM_R  |= INPUT_BUTTON_PINS;
+    // Unmask the interrupt for PF0 & PF4
+    GPIO_PORTF_IM_R |= INPUT_BUTTON_PINS;
 
-    /* Lock Port F configuration */
+    // Lock Port F configuration
     GPIO_PORTF_LOCK_R = 0;
 }
 
@@ -155,7 +160,7 @@ void Setup_Global_Interrupts(void) {
     // Equivalent statement: NVIC_EN0_R |= (1 << 30);
     NVIC_EnableIRQn(30);
 
-    // Globally enable interrupt requests (IRQs)
+    // Globally enable interrupt requests (IRQs) by clearing priority mask
     // Equivalent assembly statement: "CPSIE I" (Change Processor State Interrupt Enable)
     __enable_irq();
 }
@@ -230,7 +235,7 @@ uint8_t DEBUG_Generate_Stair_Voltage_Waveform_Tick(int tick) {
 // Generates a sawtooth / right-triangle waveform, starting from 0 and rising to -3.3 V before repeating
 uint8_t Generate_Sawtooth_Waveform_Tick(int tick) {
     // Resulting output range: [0, +255]
-    unsigned char y_output = (unsigned char) (tick % 256);
+    unsigned char y_output = (unsigned char) (tick % SAWTOOTH_PERIOD);
 
     // HACK: For some reason, our DAC implementation was such that a 1/2 scaling factor was needed to
     // prevent clipping, might be due to op-amp voltage power supply levels despite being set to +/- 5V...
@@ -246,12 +251,12 @@ uint8_t Generate_Sawtooth_Waveform_Tick(int tick) {
 // Generates a sinusoidal waveform with a range from +0 V to -3.3 V and repeating a cycle every 60 ms
 uint8_t Generate_Sine_Waveform_Tick(int tick) {
     // Formula: y = sin(2*pi*(t / T)), where T = length of full period
-    unsigned char t = (unsigned char) (tick % 60);
+    unsigned char t = (unsigned char) (tick % SINE_PERIOD);
     unsigned char y_output;
     float y, y_shifted, y_scaled;
 
     // Resulting output range: [-1, +1]
-    y = sinf(2 * 3.14 * t / 60);
+    y = sinf(2 * 3.14 * t / SINE_PERIOD);
 
     // Resulting output range: [0, +2]
     y_shifted = y + 1;
