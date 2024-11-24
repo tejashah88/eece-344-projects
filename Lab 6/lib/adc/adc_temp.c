@@ -92,7 +92,7 @@ uint32_t Get_ADC_Temp_Reading(void) {
 
 // Convert raw ADC value of internal temperature sensor to Celsius
 //   Input range (unsigned int): [0, 4095]
-//   Output range (float): []
+//   Output range (float): [-40 C, +85 C]
 float Convert_Temp_Voltage_Celsius(float vRefPos, float vRefNeg, uint32_t adcReading) {
     // Formula source: pg. 813 of datasheet (https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf)
     float tempCelsius = 147.5f - ((75 * (vRefPos - vRefNeg) * (float) adcReading) / 4096);
