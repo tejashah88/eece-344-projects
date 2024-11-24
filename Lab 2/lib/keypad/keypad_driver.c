@@ -18,73 +18,73 @@ void Keypad_Init(void) {
 
 
 void Setup_Keypad_GPIO_Column_Pins(void) {
-    /* Enable Port C clock */
+    // Enable Port C clock
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R2;
 
-    /* Wait until Port C clock is fully initialized */
-    while((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R2) == 0);
+    // Wait until Port C clock is fully initialized
+    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R2) == 0);
 
-    /* Unlock Port C configuration */
+    // Unlock Port C configuration
     GPIO_PORTC_LOCK_R = GPIO_LOCK_KEY;
 
-    /* Set commit register to only work with pins PC4 - PC7 */
+    // Set commit register to only work with pins PC4 - PC7
     GPIO_PORTC_CR_R = KEYPAD_ALL_COLS;
 
-    /* Set all LED pins (PC4 - PC7) as inputs */
+    // Set all LED pins (PC4 - PC7) as inputs
     GPIO_PORTC_DIR_R |= ~KEYPAD_ALL_COLS;
 
-    /* Disable all analog functionality for PC4 - PC7 */
+    // Disable all analog functionality for PC4 - PC7
     GPIO_PORTC_AMSEL_R &= ~KEYPAD_ALL_COLS;
 
-    /* Enable digital functionality for PC4 - PC7 */
+    // Enable digital functionality for PC4 - PC7
     GPIO_PORTC_DEN_R |= KEYPAD_ALL_COLS;
 
-    /* Disable all alternate functionality for PC4 - PC7 */
+    // Disable all alternate functionality for PC4 - PC7
     GPIO_PORTC_AFSEL_R &= ~KEYPAD_ALL_COLS;
 
-    /* Disable all special functionality for PC4 - PC7 */
+    // Disable all special functionality for PC4 - PC7
     GPIO_PORTC_PCTL_R &= ~KEYPAD_ALL_COLS;
 
-    /* Enable pull-up resistors for PC4 - PC7 */
+    // Enable pull-up resistors for PC4 - PC7
     GPIO_PORTC_PUR_R |= KEYPAD_ALL_COLS;
 
-    /* Lock Port C configuration */
+    // Lock Port C configuration
     GPIO_PORTC_LOCK_R = 0;
 }
 
 
 void Setup_Keypad_GPIO_Row_Pins(void) {
-    /* Enable Port E clock */
+    // Enable Port E clock
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
 
-    /* Wait until Port E clock is fully initialized */
-    while((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R4) == 0);
+    // Wait until Port E clock is fully initialized
+    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R4) == 0);
 
-    /* Unlock Port E configuration */
+    // Unlock Port E configuration
     GPIO_PORTE_LOCK_R = GPIO_LOCK_KEY;
 
-    /* Set commit register to only work with pins PE0 - PE3 */
+    // Set commit register to only work with pins PE0 - PE3
     GPIO_PORTE_CR_R = KEYPAD_ALL_ROWS;
 
-    /* Set all LED pins (PE0 - PE3) as outputs */
+    // Set all LED pins (PE0 - PE3) as outputs
     GPIO_PORTE_DIR_R |= KEYPAD_ALL_ROWS;
 
-    /* Disable all analog functionality for PE0 - PE3 */
+    // Disable all analog functionality for PE0 - PE3
     GPIO_PORTE_AMSEL_R &= ~KEYPAD_ALL_ROWS;
 
-    /* Enable digital functionality for PE0 - PE3 */
+    // Enable digital functionality for PE0 - PE3
     GPIO_PORTE_DEN_R |= KEYPAD_ALL_ROWS;
 
-    /* Disable all alternate functionality for PE0 - PE3 */
+    // Disable all alternate functionality for PE0 - PE3
     GPIO_PORTE_AFSEL_R &= ~KEYPAD_ALL_ROWS;
 
-    /* Disable all special functionality for PE0 - PE3 */
+    // Disable all special functionality for PE0 - PE3
     GPIO_PORTE_PCTL_R &= ~KEYPAD_ALL_ROWS;
 
-    /* Enable open-drain mode for PE0 - PE3 */
+    // Enable open-drain mode for PE0 - PE3
     GPIO_PORTE_ODR_R |= KEYPAD_ALL_ROWS;
 
-    /* Lock Port E configuration */
+    // Lock Port E configuration
     GPIO_PORTE_LOCK_R = 0;
 }
 

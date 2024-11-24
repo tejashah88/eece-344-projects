@@ -2,7 +2,7 @@
 #define KEYPAD__DRIVER
 
 
-/* Keypad pin definitions */
+// Keypad pin definitions
 #define KEYPAD_ROW1		0x01 // = 0x01 (PE0)
 #define KEYPAD_ROW2		0x02 // = 0x02 (PE1)
 #define KEYPAD_ROW3		0x04 // = 0x04 (PE2)

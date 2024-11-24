@@ -34,37 +34,37 @@ void SysTick_Wait_200ms(uint32_t delay);
 
 
 void Setup_Port_A_Pins(void) {
-    /* Enable Port A clock */
+    // Enable Port A clock
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
 
-    /* Wait until Port A clock is fully initialized */
-    while((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R0) == 0);
+    // Wait until Port A clock is fully initialized
+    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R0) == 0);
 
-    /* Unlock Port A configuration */
+    // Unlock Port A configuration
     GPIO_PORTA_LOCK_R = GPIO_LOCK_KEY;
 
-    /* Set commit register to only work with PA7 - PA3 */
+    // Set commit register to only work with PA7 - PA3
     GPIO_PORTA_CR_R = PORTA_WORKING_PINS;
 
-    /* Set output indicator LEDs (PA7 & PA6) pin as output and rest as inputs */
+    // Set output indicator LEDs (PA7 & PA6) pin as output and rest as inputs
     GPIO_PORTA_DIR_R |= OUTPUT_INDICATOR_LEDS;
 
-    /* Disable all analog functionality for PA7 - PA3 */
+    // Disable all analog functionality for PA7 - PA3
     GPIO_PORTA_AMSEL_R &= ~PORTA_WORKING_PINS;
 
-    /* Enable digital functionality for PA7 - PA3 */
+    // Enable digital functionality for PA7 - PA3
     GPIO_PORTA_DEN_R |= PORTA_WORKING_PINS;
 
-    /* Disable all alternate functionality for PA7 - PA3 */
+    // Disable all alternate functionality for PA7 - PA3
     GPIO_PORTA_AFSEL_R &= ~PORTA_WORKING_PINS;
 
-    /* Disable all special functionality for PA7 - PA3 */
+    // Disable all special functionality for PA7 - PA3
     GPIO_PORTA_PCTL_R &= ~PORTA_WORKING_PINS;
 
-    /* Enable pull-down resistors for PA7 & PA6 (active high logic) */
+    // Enable pull-down resistors for PA7 & PA6 (active high logic)
     GPIO_PORTA_PDR_R |= INPUT_DOOR_BUTTONS;
 
-    /* Lock Port A configuration */
+    // Lock Port A configuration
     GPIO_PORTA_LOCK_R = 0;
 }
 

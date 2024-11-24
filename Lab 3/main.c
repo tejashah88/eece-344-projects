@@ -39,70 +39,70 @@ void Run_Task_2(void);
 
 
 void Setup_Port_A_Pins(void) {
-    /* Enable Port A clock */
+    // Enable Port A clock
 	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
 
-	/* Wait until Port A clock is fully initialized */
-	while((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R0) == 0);
+	// Wait until Port A clock is fully initialized
+	while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R0) == 0);
 
-	/* Unlock Port A configuration */
+	// Unlock Port A configuration
 	GPIO_PORTA_LOCK_R = GPIO_LOCK_KEY;
 
-	/* Set commit register to only work with pin PA7 */
+	// Set commit register to only work with pin PA7
 	GPIO_PORTA_CR_R = OUTPUT_DC_PWM_PIN;
 
-	/* Set PA7 pin as output */
+	// Set PA7 pin as output
 	GPIO_PORTA_DIR_R |= OUTPUT_DC_PWM_PIN;
 
-	/* Disable all analog functionality for PA7 */
+	// Disable all analog functionality for PA7
 	GPIO_PORTA_AMSEL_R &= ~OUTPUT_DC_PWM_PIN;
 
-	/* Enable digital functionality for PA7 */
+	// Enable digital functionality for PA7
 	GPIO_PORTA_DEN_R |= OUTPUT_DC_PWM_PIN;
 
-	/* Disable all alternate functionality for PA7 */
+	// Disable all alternate functionality for PA7
 	GPIO_PORTA_AFSEL_R &= ~OUTPUT_DC_PWM_PIN;
 
-	/* Disable all special functionality for PA7 */
+	// Disable all special functionality for PA7
 	GPIO_PORTA_PCTL_R &= ~OUTPUT_DC_PWM_PIN;
 
-    /* Lock Port A configuration */
+    // Lock Port A configuration
     GPIO_PORTA_LOCK_R = 0;
 }
 
 
 void Setup_Port_B_Pins(void) {
-    /* Enable Port B clock */
+    // Enable Port B clock
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R1;
 
-    /* Wait until Port B clock is fully initialized */
-    while((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R1) == 0);
+    // Wait until Port B clock is fully initialized
+    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R1) == 0);
 
-    /* Unlock Port B configuration */
+    // Unlock Port B configuration
     GPIO_PORTB_LOCK_R = GPIO_LOCK_KEY;
 
-    /* Set commit register to only work with pins PB0 - PB7 */
+    // Set commit register to only work with pins PB0 - PB7
     GPIO_PORTB_CR_R = OUTPUT_LED_SEG_PINS;
 
-    /* Set all LED pins (PB0 - PB7) as outputs */
+    // Set all LED pins (PB0 - PB7) as outputs
     GPIO_PORTB_DIR_R |= OUTPUT_LED_SEG_PINS;
 
-    /* Disable all analog functionality for PB0 - PB7 */
+    // Disable all analog functionality for PB0 - PB7
     GPIO_PORTB_AMSEL_R &= ~OUTPUT_LED_SEG_PINS;
 
-    /* Enable digital functionality for PB0 - PB7 */
+    // Enable digital functionality for PB0 - PB7
     GPIO_PORTB_DEN_R |= OUTPUT_LED_SEG_PINS;
 
-    /* Disable all alternate functionality for PB0 - PB7 */
+    // Disable all alternate functionality for PB0 - PB7
     GPIO_PORTB_AFSEL_R &= ~OUTPUT_LED_SEG_PINS;
 
-    /* Disable all special functionality for PB0 - PB7 */
+    // Disable all special functionality for PB0 - PB7
     GPIO_PORTB_PCTL_R &= ~OUTPUT_LED_SEG_PINS;
 
-    /* Enable pull-up resistors for PB0 - PB7 */
+    // Enable pull-up resistors for PB0 - PB7
     GPIO_PORTB_PUR_R |= OUTPUT_LED_SEG_PINS;
 
-    /* Lock Port B configuration */
+    // Lock Port B configuration
     GPIO_PORTB_LOCK_R = 0;
 }
 

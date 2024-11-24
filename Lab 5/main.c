@@ -59,67 +59,67 @@ volatile int outputMode = 0;
 
 
 void Setup_Port_B_Pins(void) {
-    /* Enable Port B clock */
+    // Enable Port B clock
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R1;
 
-    /* Wait until Port B clock is fully initialized */
-    while((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R1) == 0);
+    // Wait until Port B clock is fully initialized
+    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R1) == 0);
 
-    /* Unlock Port B configuration */
+    // Unlock Port B configuration
     GPIO_PORTB_LOCK_R = GPIO_LOCK_KEY;
 
-    /* Set commit register to only work with pins PB0 - PB7 */
+    // Set commit register to only work with pins PB0 - PB7
     GPIO_PORTB_CR_R = OUTPUT_DAC_PIN;
 
-    /* Set DAC output pins (PB0 - PB7) as outputs */
+    // Set DAC output pins (PB0 - PB7) as outputs
     GPIO_PORTB_DIR_R |= OUTPUT_DAC_PIN;
 
-    /* Disable analog functionality for PB0 - PB7 */
+    // Disable analog functionality for PB0 - PB7
     GPIO_PORTB_AMSEL_R &= ~(OUTPUT_DAC_PIN);
 
-    /* Enable digital functionality for PB0 - PB7 */
+    // Enable digital functionality for PB0 - PB7
     GPIO_PORTB_DEN_R |= OUTPUT_DAC_PIN;
 
-    /* Disable all alternate functionality for PB0 - PB7 */
+    // Disable all alternate functionality for PB0 - PB7
     GPIO_PORTB_AFSEL_R &= ~OUTPUT_DAC_PIN;
 
-    /* Disable all special functionality for PB0 - PB7 */
+    // Disable all special functionality for PB0 - PB7
     GPIO_PORTB_PCTL_R &= ~OUTPUT_DAC_PIN;
 
-    /* Lock Port B configuration */
+    // Lock Port B configuration
     GPIO_PORTB_LOCK_R = 0;
 }
 
 
 void Setup_Port_F_Pins(void) {
-    /* Enable Port F clock */
+    // Enable Port F clock
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5;
 
-    /* Wait until Port F clock is fully initialized */
-    while((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R5) == 0);
+    // Wait until Port F clock is fully initialized
+    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R5) == 0);
 
-    /* Unlock Port F configuration */
+    // Unlock Port F configuration
     GPIO_PORTF_LOCK_R = GPIO_LOCK_KEY;
 
-    /* Set commit register to only work with pins PF0 & PF4 */
+    // Set commit register to only work with pins PF0 & PF4
     GPIO_PORTF_CR_R = INPUT_BUTTON_PINS;
 
-    /* Set input buttons pins (PF0 & PF4) as inputs */
+    // Set input buttons pins (PF0 & PF4) as inputs
     GPIO_PORTF_DIR_R &= ~INPUT_BUTTON_PINS;
 
-    /* Disable analog functionality for PF0 & PF4 */
+    // Disable analog functionality for PF0 & PF4
     GPIO_PORTF_AMSEL_R &= ~(INPUT_BUTTON_PINS);
 
-    /* Enable digital functionality for PF0 & PF4 */
+    // Enable digital functionality for PF0 & PF4
     GPIO_PORTF_DEN_R |= INPUT_BUTTON_PINS;
 
-    /* Disable all alternate functionality for PF0 & PF4 */
+    // Disable all alternate functionality for PF0 & PF4
     GPIO_PORTF_AFSEL_R &= ~INPUT_BUTTON_PINS;
 
-    /* Disable all special functionality for PF0 & PF4 */
+    // Disable all special functionality for PF0 & PF4
     GPIO_PORTF_PCTL_R &= ~INPUT_BUTTON_PINS;
 
-    /* Enable pull-down resistors for input button pins (PF0 & PF4) */
+    // Enable pull-down resistors for input button pins (PF0 & PF4)
     GPIO_PORTF_PUR_R |= INPUT_BUTTON_PINS;
 
     //////////////////////////////

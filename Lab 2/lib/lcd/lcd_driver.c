@@ -22,52 +22,52 @@ void LCD_4Bits_Init(void) {
     Setup_LCD_GPIO_Pins();
 
     // Sets cursor to beginning of display and unshifts display if set before
-    LCD4Bits_Cmd(LCD_RETURN_HOME); // 0x02
+    LCD_4Bits_Cmd(LCD_RETURN_HOME); // 0x02
 
     // Sets LCD to operate in 4-bit mode, using 2 lines and 5 x 8 fonts
     // NOTE: Function set command MUST be run first before any other LCD commands
-    LCD4Bits_Cmd(LCD_FUNCTION_SET | LCD_4_BIT_MODE | LCD_2_LINE_MODE | LCD_5x8_FONT_MODE); // 0x28
+    LCD_4Bits_Cmd(LCD_FUNCTION_SET | LCD_4_BIT_MODE | LCD_2_LINE_MODE | LCD_5x8_FONT_MODE); // 0x28
 
     // Set cursor to increment automatically after each character insert
-    LCD4Bits_Cmd(LCD_ENTRY_MODE_SET | LCD_ENTRY_CURSOR_AUTO_MOVE_RIGHT | LCD_ENTRY_NO_SHIFT_DISPLAY); // 0x06
+    LCD_4Bits_Cmd(LCD_ENTRY_MODE_SET | LCD_ENTRY_CURSOR_AUTO_MOVE_RIGHT | LCD_ENTRY_NO_SHIFT_DISPLAY); // 0x06
 
     // Turn on the display & cursor and set cursor to blinking
-    LCD4Bits_Cmd(LCD_DISPLAY_CTRL | LCD_DISPLAY_FULL_ON | LCD_DISPLAY_CURSOR_ON | LCD_DISPLAY_BLINKING_CURSOR_ON); // 0x0F
+    LCD_4Bits_Cmd(LCD_DISPLAY_CTRL | LCD_DISPLAY_FULL_ON | LCD_DISPLAY_CURSOR_ON | LCD_DISPLAY_BLINKING_CURSOR_ON); // 0x0F
 
     // Clear the LCD display
-    LCD4Bits_Cmd(LCD_CLEAR_DISPLAY); // 0x01
+    LCD_4Bits_Cmd(LCD_CLEAR_DISPLAY); // 0x01
 }
 
 
 void Setup_LCD_GPIO_Pins(void) {
-    /* Enable Port B clock */
+    // Enable Port B clock
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R1;
 
-    /* Wait until Port B clock is fully initialized */
-    while((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R1) == 0);
+    // Wait until Port B clock is fully initialized
+    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R1) == 0);
 
-    /* Unlock Port B configuration */
+    // Unlock Port B configuration
     GPIO_PORTB_LOCK_R = GPIO_LOCK_KEY;
 
-    /* Set commit register to only work with pins PB0 - PB2 & PB4 - PB7 */
+    // Set commit register to only work with pins PB0 - PB2 & PB4 - PB7
     GPIO_PORTB_CR_R = LCD_ALL_PINS;
 
-    /* Set all LED pins (PB0 - PB2 & PB4 - PB7) as outputs */
+    // Set all LED pins (PB0 - PB2 & PB4 - PB7) as outputs
     GPIO_PORTB_DIR_R |= LCD_ALL_PINS;
 
-    /* Disable all analog functionality for PB0 - PB2 & PB4 - PB7 */
+    // Disable all analog functionality for PB0 - PB2 & PB4 - PB7
     GPIO_PORTB_AMSEL_R &= ~LCD_ALL_PINS;
 
-    /* Enable digital functionality for PB0 - PB2 & PB4 - PB7 */
+    // Enable digital functionality for PB0 - PB2 & PB4 - PB7
     GPIO_PORTB_DEN_R |= LCD_ALL_PINS;
 
-    /* Disable all alternate functionality for PB0 - PB2 & PB4 - PB7 */
+    // Disable all alternate functionality for PB0 - PB2 & PB4 - PB7
     GPIO_PORTB_AFSEL_R &= ~LCD_ALL_PINS;
 
-    /* Disable all special functionality for PB0 - PB2 & PB4 - PB7 */
+    // Disable all special functionality for PB0 - PB2 & PB4 - PB7
     GPIO_PORTB_PCTL_R &= ~LCD_ALL_PINS;
 
-    /* Lock Port B configuration */
+    // Lock Port B configuration
     GPIO_PORTB_LOCK_R = 0;
 }
 
@@ -98,7 +98,7 @@ void LCD_Write8Bits_4BitMode(unsigned char data, unsigned char control) {
 }
 
 
-void LCD4Bits_Cmd(unsigned char command) {
+void LCD_4Bits_Cmd(unsigned char command) {
     // Send command packet in 4-bit mode
     LCD_Write8Bits_4BitMode(command, (LCD_RW_WRITE_MODE | LCD_RS_COMMAND_MODE));
 
@@ -110,7 +110,7 @@ void LCD4Bits_Cmd(unsigned char command) {
 }
 
 
-void LCD4Bits_Data(unsigned char data) {
+void LCD_4Bits_Data(unsigned char data) {
     // Send data packet in 4-bit mode
     LCD_Write8Bits_4BitMode(data, (LCD_RW_WRITE_MODE | LCD_RS_DATA_MODE));
 

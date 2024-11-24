@@ -2,7 +2,6 @@
  * Reference material:
  * - MCU Datasheet: https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf
  * - Suplimental info: https://web2.qatar.cmu.edu/cs/15348/lectures/Lecture03.pdf
- * - LCD Datasheet: https://www.sparkfun.com/datasheets/LCD/HD44780.pdf
  *
  * Useful info:
  * - Pin to hex: (1 << pinN)
@@ -14,28 +13,17 @@
  */
 
 // Include the Device header
-#include "mcu/tm4c123gh6pm.h"
-#include "mcu/mcu_utils.h"
-#include "lcd/lcd_driver.h"
-#include "keypad/keypad_driver.h"
+#include "lib/mcu/tm4c123gh6pm.h"
+#include "lib/mcu/mcu_utils.h"
+#include "lib/lcd/lcd_driver.h"
+#include "lib/keypad/keypad_driver.h"
 
 void Run_Task_1(void);
 void Run_Task_2(void);
 
-/* Used for defining which task from the lab to run. Change number and recompile as necessary. */
+// Used for defining which task from the lab to run. Change number and recompile as necessary.
 #define TASK_NUM 1
 
-int main() {
-    /* Running task phase */
-    // NOTE: Change TASK_NUM above based on which lab task to run and recompile
-#if TASK_NUM == 1
-    Run_Task_1();
-#elif TASK_NUM == 2
-    Run_Task_2();
-#else
-    return 0;
-#endif
-}
 
 ////////////////////////
 // Lab Task functions //
@@ -59,16 +47,16 @@ int main() {
 void Run_Task_1(void) {
     int i;
     char ch;
-    const unsigned char DISPLAY_STRING[] = "HELLO WORLD";
+    const char DISPLAY_STRING[] = "HELLO WORLD";
 
     // Call the LCD initialization function
     LCD_4Bits_Init();
 
     // Clear the LCD screen
-    LCD4Bits_Cmd(LCD_CLEAR_DISPLAY);
+    LCD_4Bits_Cmd(LCD_CLEAR_DISPLAY);
 
     // Set the cursor to the beginning of the first line
-    LCD4Bits_Cmd(LCD_SET_DDRAM_ADDR + LCD_LINE1_START);
+    LCD_4Bits_Cmd(LCD_SET_DDRAM_ADDR + LCD_LINE1_START);
 
     // Allow some delay, so the slow LCD will catch up with the fast MCU.
     Delay_Milli(500);
@@ -78,7 +66,7 @@ void Run_Task_1(void) {
         ch = DISPLAY_STRING[i];
 
         // Test the LCD by sending a character.
-        LCD4Bits_Data(ch);
+        LCD_4Bits_Data(ch);
 
         // Allow some delay, so the slow LCD will catch up with the fast MCU.
         Delay_Milli(500);
@@ -121,10 +109,10 @@ void Run_Task_2(void) {
     LCD_4Bits_Init();
 
     // Clear the LCD screen
-    LCD4Bits_Cmd(LCD_CLEAR_DISPLAY);
+    LCD_4Bits_Cmd(LCD_CLEAR_DISPLAY);
 
     // Set the cursor to the beginning of the first line
-    LCD4Bits_Cmd(LCD_SET_DDRAM_ADDR + LCD_LINE1_START);
+    LCD_4Bits_Cmd(LCD_SET_DDRAM_ADDR + LCD_LINE1_START);
 
     // Allow some delay, so the slow LCD will catch up with the fast MCU.
     Delay_Milli(500);
@@ -140,15 +128,33 @@ void Run_Task_2(void) {
                 key_count = 0;	// It's better to clear the LCD screen too.
 
                 // Clear the LCD screen
-                LCD4Bits_Cmd(LCD_CLEAR_DISPLAY);
+                LCD_4Bits_Cmd(LCD_CLEAR_DISPLAY);
 
                 // Set the cursor to the beginning of the first line
-                LCD4Bits_Cmd(LCD_SET_DDRAM_ADDR + LCD_LINE1_START);
+                LCD_4Bits_Cmd(LCD_SET_DDRAM_ADDR + LCD_LINE1_START);
             }
 
             // Display the key input on your LCD.
-            LCD4Bits_Data(key);
+            LCD_4Bits_Data(key);
             Delay_Milli(500);
         }
     }
+}
+
+
+//////////////////
+// Main program //
+//////////////////
+
+
+int main() {
+    // Running task phase
+    // NOTE: Change TASK_NUM above based on which lab task to run and recompile
+#if TASK_NUM == 1
+    Run_Task_1();
+#elif TASK_NUM == 2
+    Run_Task_2();
+#else
+    return 0;
+#endif
 }
