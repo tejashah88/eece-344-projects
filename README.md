@@ -8,6 +8,8 @@ Each lab project has a `Documentation` folder which (mostly) includes the follow
 - Program Flowchart
 - Circuit Picture
 
+All projects are compiled using C90 mode without GNU extensions (although the Keil compiler does have some extras like slash comments) and all warnings are enabled (that is according to Keil).
+
 ## Contributors
 * Lab Partners: Ethan Noritake & Tejas Shah
 * Primary Code Contributor: Tejas Shah
