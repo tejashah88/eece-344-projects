@@ -25,7 +25,7 @@
 
 // Voltage Reference values
 #define VREF_POS 3.3
-#define VREF_NEG 3.3
+#define VREF_NEG 0
 
 
 int main() {
@@ -60,11 +60,17 @@ int main() {
 
         // Prepare the display string for the LCD
         char lineBuffer[16];
-        //   NOTE: This format allows for negative temperatures and up
-        //   to 2 decimals within a single LCD line (max 16 characters).
+        // NOTE: This format allows for negative temperatures and up
+        // to 2 decimals within a single LCD line (max 16 characters).
         sprintf(lineBuffer, "Temp (C): %.2f.", tempCelsius);
+
+        // Set the cursor to the beginning of the first line
+        LCD_4Bits_Cmd(LCD_SET_DDRAM_ADDR + LCD_LINE1_START);
 
         // Display the string to the LCD (includes automatic handling of delays)
         LCD_4Bits_OutputString(lineBuffer);
+
+        // Allow some delay to let the LCD display the character
+        SysTick_Wait_500ms(6);
     }
 }
