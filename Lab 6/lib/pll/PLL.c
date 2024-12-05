@@ -33,7 +33,7 @@ int PLL_Init(uint8_t sysdiv2_divisor) {
 
     // Set the system clock frequency based on the following formula: 400 Mhz / (SYSDIV2 + 1)
     // See Table 5-6 on pg. 224 of the MCU datasheet for example frequencies and limitations
-    SYSCTL_RCC2_R |= (sysdiv2_divisor << 22);
+    SYSCTL_RCC2_R += (sysdiv2_divisor << 22);
 
     // Step 6: Wait for PLL to lock by polling PLLLRIS (PLL Lock Raw Interrupt Status)
     while ((SYSCTL_RIS_R & SYSCTL_RIS_PLLLRIS) == 0);
