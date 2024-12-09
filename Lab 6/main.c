@@ -48,9 +48,6 @@ int main() {
     // Allow some delay to let the LCD display the character
     SysTick_Wait_500ms(1);
 
-    // Initialize GPIO for Port E (internal temperature sensor)
-    Setup_Port_E_Pins();
-
     while (1) {
         // Fetch the latest temperature reading (as raw digital voltage) from PE3
         uint32_t tempRaw = Get_ADC_Temp_Reading();

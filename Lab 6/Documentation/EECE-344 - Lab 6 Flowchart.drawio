@@ -1,0 +1,1062 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Page-1" id="JnxH9sxxqtZDQ9Q5BQ5N">
+    <mxGraphModel dx="3489" dy="2374" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-103" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBorderColor=none;strokeWidth=2;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;fillStyle=auto;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="440" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-106" value="Main Logic" style="text;html=1;align=center;verticalAlign=middle;resizable=1;points=[];autosize=1;strokeColor=default;fillColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-406" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBorderColor=none;fillColor=#dae8fc;strokeWidth=2;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="1480" height="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-407" value="LCD Driver" style="text;html=1;align=center;verticalAlign=middle;resizable=1;points=[];autosize=1;strokeColor=default;fillColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="10" width="1480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-408" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-409" target="wx0NTUSSTUv_tsJH7hlQ-443">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-409" value="Initialize LCD" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-410" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-411" target="wx0NTUSSTUv_tsJH7hlQ-421">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-411" value="Setup LCD Pins" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-412" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-413" target="wx0NTUSSTUv_tsJH7hlQ-456">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-413" value="Write 4 bits to LCD&lt;div&gt;in 4-bit mode&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-414" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-415" target="wx0NTUSSTUv_tsJH7hlQ-469">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-415" value="Write 8 bits to LCD&lt;div&gt;in 4-bit mode&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-416" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-417" target="wx0NTUSSTUv_tsJH7hlQ-480">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-417" value="Send 4-bit&lt;div&gt;command&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;to LCD&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-418" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-419" target="wx0NTUSSTUv_tsJH7hlQ-485">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-419" value="Send 4-bit&lt;div&gt;data&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;to LCD&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-420" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-421" target="wx0NTUSSTUv_tsJH7hlQ-426">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-421" value="Enable Port B Clock" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-422" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-423" target="wx0NTUSSTUv_tsJH7hlQ-432">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-423" value="Set commit register&lt;div&gt;to only work with&lt;/div&gt;&lt;div&gt;LCD Pins&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-424" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-426" target="wx0NTUSSTUv_tsJH7hlQ-428">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-425" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];labelBorderColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-424">
+          <mxGeometry x="0.1009" relative="1" as="geometry">
+            <mxPoint y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-426" value="Is Port B Clock enabled?" style="rhombus;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-427" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-428" target="wx0NTUSSTUv_tsJH7hlQ-423">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-428" value="Unlock port B configuration" style="whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-429" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-426" target="wx0NTUSSTUv_tsJH7hlQ-426">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="340" />
+              <mxPoint x="890" y="280" />
+              <mxPoint x="790" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-430" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];labelBorderColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-429">
+          <mxGeometry x="-0.8606" y="-2" relative="1" as="geometry">
+            <mxPoint x="5" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-431" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-432" target="wx0NTUSSTUv_tsJH7hlQ-434">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-432" value="Set all LCD Pins&lt;div&gt;as output&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-433" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-434" target="wx0NTUSSTUv_tsJH7hlQ-436">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-434" value="Disable analog functionality for all LCD Pins" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-435" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-436" target="wx0NTUSSTUv_tsJH7hlQ-438">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-436" value="Enable digital functionality for all LCD Pins" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-437" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-438" target="wx0NTUSSTUv_tsJH7hlQ-440">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-438" value="Disable all alternate functionality for all LCD Pins" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-439" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-440" target="wx0NTUSSTUv_tsJH7hlQ-441">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-440" value="Disable all special functionality for all LCD Pins" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1090" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-441" value="END" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1180" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-442" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-443" target="wx0NTUSSTUv_tsJH7hlQ-445">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-443" value="Setup LCD Pins" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-444" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-445" target="wx0NTUSSTUv_tsJH7hlQ-447">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-445" value="Send command to set cursor to beginning of display and unshifts display if set before" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-446" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-447" target="wx0NTUSSTUv_tsJH7hlQ-449">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-447" value="Send command to set LCD to operate in 4-bit mode, using 2 lines and 5 x 8 fonts" style="whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="415" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-448" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-449" target="wx0NTUSSTUv_tsJH7hlQ-451">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-449" value="Send command to set cursor to increment automatically after each character insert" style="whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-450" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-451" target="wx0NTUSSTUv_tsJH7hlQ-452">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-451" value="Send command to turn on the display &amp;amp; cursor and set cursor to blinking" style="whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="625" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-452" value="Send command to clear the Screen" style="whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-453" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-454" target="wx0NTUSSTUv_tsJH7hlQ-460">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-454" value="Set data packet to include &#39;data&#39; as upper 8 bits" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-455" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-456" target="wx0NTUSSTUv_tsJH7hlQ-458">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-456" value="data&lt;div&gt;(unsigned char)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-457" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-458" target="wx0NTUSSTUv_tsJH7hlQ-454">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-458" value="control&lt;div&gt;(unsigned char)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-459" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-460" target="wx0NTUSSTUv_tsJH7hlQ-462">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-460" value="Set data packet to include &#39;control&#39; as lower 8 bits" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-461" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-462" target="wx0NTUSSTUv_tsJH7hlQ-464">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-462" value="Send data packet to LCD pins, and set enable pin to HIGH" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-463" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-464" target="wx0NTUSSTUv_tsJH7hlQ-466">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-464" value="Delay for 3 us" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="775" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-465" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-466" target="wx0NTUSSTUv_tsJH7hlQ-467">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-466" value="Set enable pin to LOW" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-467" value="END" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="980" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-468" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-469" target="wx0NTUSSTUv_tsJH7hlQ-471">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-469" value="data&lt;div&gt;(unsigned char)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-470" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-471" target="wx0NTUSSTUv_tsJH7hlQ-473">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-471" value="control&lt;div&gt;(unsigned char)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-472" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-473" target="wx0NTUSSTUv_tsJH7hlQ-475">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-473" value="Write upper 4 bits (data) to LCD&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;in 4-bit mode&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-474" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-475" target="wx0NTUSSTUv_tsJH7hlQ-476">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-475" value="Write lower 4 bits (data) to LCD&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;in 4-bit mode&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-476" value="END" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="680" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-477" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-478" target="wx0NTUSSTUv_tsJH7hlQ-493">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-478" value="Send command&amp;nbsp; to LCD pins&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;in 4-bit mode&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-479" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-480" target="wx0NTUSSTUv_tsJH7hlQ-478">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-480" value="command&lt;div&gt;(unsigned char)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="195" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-481" value="END" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="680" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-482" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-483" target="wx0NTUSSTUv_tsJH7hlQ-488">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-483" value="Delay for 3 us" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-484" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-485" target="wx0NTUSSTUv_tsJH7hlQ-487">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-485" value="data&lt;div&gt;(unsigned char)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="195" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-486" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-487" target="wx0NTUSSTUv_tsJH7hlQ-483">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-487" value="Send datato LCD pins&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;in 4-bit mode&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-488" value="END" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-489" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-493" target="wx0NTUSSTUv_tsJH7hlQ-495">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-490" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];labelBorderColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-489">
+          <mxGeometry x="0.2747" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-491" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-493" target="wx0NTUSSTUv_tsJH7hlQ-497">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-492" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];labelBorderColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-491">
+          <mxGeometry x="0.2141" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-493" value="If command &amp;lt; 4?" style="rhombus;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="420" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-494" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-495" target="wx0NTUSSTUv_tsJH7hlQ-481">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-495" value="Delay for 2 ms" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-496" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-497" target="wx0NTUSSTUv_tsJH7hlQ-481">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1430" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-497" value="Delay for 37 us" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-499" value="&lt;h1 style=&quot;margin-top: 0px; line-height: 120%;&quot;&gt;I/O Setup&lt;/h1&gt;&lt;div&gt;&lt;p style=&quot;line-height: 20px; font-size: 20px;&quot;&gt;&lt;b&gt;Internal Temp Sensor&lt;/b&gt;:&lt;/p&gt;&lt;p style=&quot;line-height: 20px; font-size: 20px;&quot;&gt;- Data Pin: PE3&lt;/p&gt;&lt;/div&gt;&lt;p style=&quot;line-height: 100%; font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b style=&quot;&quot;&gt;LCD Control Pins&lt;/b&gt;:&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 100%; font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;- RS pin: PB0&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 100%; font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;- RW pin: PB1&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 100%; font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;- EN pin: PB2&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 100%; font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;LCD Data Pins&lt;/b&gt;:&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 100%; font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;- Data 0 pin: PB4&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 100%; font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;- Data 1 pin: PB5&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 100%; font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;- Data 2 pin: PB6&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 100%; font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;- Data 3 pin: PB7&lt;/font&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;spacingLeft=0;spacingBottom=0;spacing=8;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="2040" y="10" width="240" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-585" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-500" target="wx0NTUSSTUv_tsJH7hlQ-501">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-500" value="Initialize PLL&lt;div&gt;with 50 MHz clock&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="205" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-586" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-501" target="wx0NTUSSTUv_tsJH7hlQ-584">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-501" value="Initialize SysTick" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="310" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-502" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBorderColor=none;fillColor=#f8cecc;strokeWidth=2;strokeColor=#b85450;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1350" width="740" height="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-503" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBorderColor=none;fillColor=#ffe6cc;strokeWidth=2;strokeColor=#d79b00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1350" width="520" height="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-504" value="PLL Logic" style="text;html=1;align=center;verticalAlign=middle;resizable=1;points=[];autosize=1;strokeColor=default;fillColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1320" width="520" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-505" value="SysTick &amp;amp; Timing Logic" style="text;html=1;align=center;verticalAlign=middle;resizable=1;points=[];autosize=1;strokeColor=default;fillColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1320" width="740" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-506" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-507" target="wx0NTUSSTUv_tsJH7hlQ-509">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-507" value="Initialize PLL" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-508" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-509" target="wx0NTUSSTUv_tsJH7hlQ-511">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-509" value="Set counter to 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-510" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-511" target="wx0NTUSSTUv_tsJH7hlQ-513">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-511" value="Configure system to use RCC2 for more advanced features" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-512" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-513" target="wx0NTUSSTUv_tsJH7hlQ-515">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-513" value="Bypass PLL during initialization via BYPASS2 flag" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-514" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-515" target="wx0NTUSSTUv_tsJH7hlQ-519">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-515" value="Clear XTAL field" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-516" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-517" target="wx0NTUSSTUv_tsJH7hlQ-521">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-517" value="Configure to use&lt;br&gt;main oscillator&lt;br&gt;crystal source" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-518" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-519" target="wx0NTUSSTUv_tsJH7hlQ-517">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="1980" />
+              <mxPoint x="270" y="1420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-519" value="Configure using 16 MHz oscillating crystal" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-520" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-521" target="wx0NTUSSTUv_tsJH7hlQ-523">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-521" value="Activate PLL by clearing PWRDN" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1495" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-522" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-523" target="wx0NTUSSTUv_tsJH7hlQ-525">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-523" value="Configure PLL-based system clock to 50 MHz (&lt;b&gt;SYSDIV2&lt;/b&gt; = 7)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-524" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-525" target="wx0NTUSSTUv_tsJH7hlQ-538">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-525" value="Wait for PLL to lock by polling PLLLRIS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-526" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-527" target="wx0NTUSSTUv_tsJH7hlQ-541">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-527" value="Re-enable use of PLL by clearing BYPASS2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="2370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-528" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-529" target="wx0NTUSSTUv_tsJH7hlQ-533">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="2140" />
+              <mxPoint x="310" y="1970" />
+              <mxPoint x="390" y="1970" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-529" value="Increment counter by 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="2110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-530" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-533" target="wx0NTUSSTUv_tsJH7hlQ-529">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-531" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-530">
+          <mxGeometry x="-0.3556" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-532" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-533" target="wx0NTUSSTUv_tsJH7hlQ-540">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="2030" />
+              <mxPoint x="490" y="2210" />
+              <mxPoint x="390" y="2210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-533" value="Is counter &amp;lt; 20" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1990" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-534" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-538" target="wx0NTUSSTUv_tsJH7hlQ-525">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-535" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-534">
+          <mxGeometry x="-0.3425" y="-2" relative="1" as="geometry">
+            <mxPoint x="-2" y="35" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-536" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-538" target="wx0NTUSSTUv_tsJH7hlQ-533">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-537" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-536">
+          <mxGeometry x="-0.3028" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-538" value="Is PLL Locked?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1820" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-539" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-540" target="wx0NTUSSTUv_tsJH7hlQ-527">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-540" value="Set counter to 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="2250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-541" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="2470" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-542" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-543" target="wx0NTUSSTUv_tsJH7hlQ-545">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-543" value="Initialize SysTick" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-544" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-545" target="wx0NTUSSTUv_tsJH7hlQ-547">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-545" value="Disable SysTick during setup" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-546" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-547" target="wx0NTUSSTUv_tsJH7hlQ-549">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-547" value="Set reload to maximum reload value" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-548" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-549" target="wx0NTUSSTUv_tsJH7hlQ-551">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-549" value="Clear the current value (&lt;b&gt;NVIC_ST_CURRENT_R&lt;/b&gt;)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="645" y="1710" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-550" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-551" target="wx0NTUSSTUv_tsJH7hlQ-552">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-551" value="Enable SysTick with PLL core clock" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-552" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1950" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-553" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-554" target="wx0NTUSSTUv_tsJH7hlQ-561">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-554" value="SysTick_Wait" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="865" y="1370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-555" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-556" target="wx0NTUSSTUv_tsJH7hlQ-558">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-556" value="Set reload to delay - 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="865" y="1600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-557" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-558" target="wx0NTUSSTUv_tsJH7hlQ-564">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="925" y="1830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-558" value="Clear the current value (&lt;b&gt;NVIC_ST_CURRENT_R&lt;/b&gt;)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="1710" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-559" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="865" y="1950" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-560" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-561" target="wx0NTUSSTUv_tsJH7hlQ-556">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-561" value="&lt;b&gt;delay&lt;/b&gt;&lt;br&gt;(number of&lt;div&gt;counts to wait)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="865" y="1490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-562" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-564" target="wx0NTUSSTUv_tsJH7hlQ-559">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-563" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-562">
+          <mxGeometry x="-0.0868" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-564" value="Has count flag reached zero?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="865" y="1830" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-565" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-564" target="wx0NTUSSTUv_tsJH7hlQ-564">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="1870" />
+              <mxPoint x="1020" y="1810" />
+              <mxPoint x="925" y="1810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-566" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-565">
+          <mxGeometry x="-0.3603" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-567" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-568" target="wx0NTUSSTUv_tsJH7hlQ-571">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-568" value="SysTick_Wait_500ms" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1137.5" y="1370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-569" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1137.5" y="2070" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-570" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-571" target="wx0NTUSSTUv_tsJH7hlQ-573">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1197.5" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-571" value="&lt;b&gt;delay&lt;/b&gt;&lt;br&gt;(number of&lt;div&gt;times to repeat&lt;/div&gt;&lt;div&gt;waiting 500 ms)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="1490" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-572" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-573" target="wx0NTUSSTUv_tsJH7hlQ-578">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-573" value="Set i = 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1137.5" y="1600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-574" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-578" target="wx0NTUSSTUv_tsJH7hlQ-580">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-575" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-574">
+          <mxGeometry x="-0.0722" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-576" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-578" target="wx0NTUSSTUv_tsJH7hlQ-569">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="1730" />
+              <mxPoint x="1070" y="2040" />
+              <mxPoint x="1198" y="2040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-577" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-576">
+          <mxGeometry x="-0.8476" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-578" value="Is i &amp;lt; delay" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1137.5" y="1690" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-579" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-580" target="wx0NTUSSTUv_tsJH7hlQ-582">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-580" value="SysTick_Wait(25,000,000)&lt;br&gt;(20 ns * 25,000,000&amp;nbsp;= 500 ms)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="1830" width="215" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-581" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-582" target="wx0NTUSSTUv_tsJH7hlQ-578">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1312.5" y="1980" />
+              <mxPoint x="1312.5" y="1670" />
+              <mxPoint x="1197.5" y="1670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-582" value="Increment i by 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1122.5" y="1950" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-587" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-584" target="wx0NTUSSTUv_tsJH7hlQ-647">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="165" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-584" value="Initialize ADC module &amp;amp; internal temperature sensor (PE3)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="420" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-656" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-647" target="wx0NTUSSTUv_tsJH7hlQ-652">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-647" value="Initialize LCD" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="520" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-651" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-652" target="wx0NTUSSTUv_tsJH7hlQ-654">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-652" value="Send command to clear the Screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="105" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-653" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-654" target="wx0NTUSSTUv_tsJH7hlQ-655">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-654" value="Send command to set&lt;div&gt;cursor position to beginning of first line&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="105" y="735" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-730" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-655" target="wx0NTUSSTUv_tsJH7hlQ-729">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="870" />
+              <mxPoint x="270" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-655" value="Delay for 500 ms" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="105" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-658" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-657" target="wx0NTUSSTUv_tsJH7hlQ-500">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-657" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="105" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-614" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBorderColor=none;fillColor=#d5e8d4;strokeWidth=2;strokeColor=#82b366;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="1350" width="1040" height="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-588" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-589" target="wx0NTUSSTUv_tsJH7hlQ-591">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-589" value="Setup GPIO&lt;div&gt;Port E&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;Pins&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="1360" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-590" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-591" target="wx0NTUSSTUv_tsJH7hlQ-597">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-591" value="Enable Port E Clock" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="1480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-592" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-593" target="wx0NTUSSTUv_tsJH7hlQ-602">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-593" value="Set commit register&lt;div&gt;to only work with&lt;div&gt;PE3&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="1830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-594" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-597" target="wx0NTUSSTUv_tsJH7hlQ-599">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-595" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-594">
+          <mxGeometry x="0.1009" relative="1" as="geometry">
+            <mxPoint y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-596" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-597">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1480" y="1580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1580" y="1620" />
+              <mxPoint x="1580" y="1560" />
+              <mxPoint x="1480" y="1560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-597" value="Is Port E Clock enabled?" style="rhombus;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="1580" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-598" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-599" target="wx0NTUSSTUv_tsJH7hlQ-593">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-599" value="Unlock port E configuration" style="whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="1720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-600" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];labelBorderColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1560" y="1620" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-601" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-602" target="wx0NTUSSTUv_tsJH7hlQ-604">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-602" value="Set PE3&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;as input&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="1940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-603" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-604" target="wx0NTUSSTUv_tsJH7hlQ-606">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-604" value="Enable analog functionality for PE3" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="2050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-605" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-606" target="wx0NTUSSTUv_tsJH7hlQ-608">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-606" value="Disable digital functionality for PE3" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="2160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-607" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-608" target="wx0NTUSSTUv_tsJH7hlQ-610">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-608" value="Enable alternate functionality for PE3" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="2270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-609" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-610" target="wx0NTUSSTUv_tsJH7hlQ-611">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1480" y="2490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-610" value="Disable all special functionality for row pins" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="2380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-611" value="END" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="2490" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-615" value="ADC &amp;amp; Temperature Logic" style="text;html=1;align=center;verticalAlign=middle;resizable=1;points=[];autosize=1;strokeColor=default;fillColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="1320" width="1040" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-616" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-617" target="wx0NTUSSTUv_tsJH7hlQ-619">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-617" value="Setup ADC0 Module" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="1360" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-618" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-619" target="wx0NTUSSTUv_tsJH7hlQ-625">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-619" value="Enable clock for ADC module" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="1480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-620" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-621" target="wx0NTUSSTUv_tsJH7hlQ-630">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-621" value="Set the sampling trigger to be software-triggered (manual)" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="1830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-622" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-625" target="wx0NTUSSTUv_tsJH7hlQ-627">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-623" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-622">
+          <mxGeometry x="0.1009" relative="1" as="geometry">
+            <mxPoint y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-624" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-625">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1680" y="1580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1780" y="1620" />
+              <mxPoint x="1780" y="1560" />
+              <mxPoint x="1680" y="1560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-625" value="Is ADC Clock enabled?" style="rhombus;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="1580" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-626" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-627" target="wx0NTUSSTUv_tsJH7hlQ-621">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-627" value="Disable Sample Sequence 3 (SS3) during configuration" style="whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="1720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-628" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];labelBorderColor=default;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1760" y="1620" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-629" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-630" target="wx0NTUSSTUv_tsJH7hlQ-632">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-630" value="Select the Analog Input 0 (Ain0) channel on PE3" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="1940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-631" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-632" target="wx0NTUSSTUv_tsJH7hlQ-634">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-632" value="Take only 1 sample at a time from the internal temperature sensor" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="2050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-640" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-634" target="wx0NTUSSTUv_tsJH7hlQ-639">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-634" value="Re-enable Sample Sequence 3 (SS3)" style="whiteSpace=wrap;html=1;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="2160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-639" value="END" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="2260" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-644" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-641" target="wx0NTUSSTUv_tsJH7hlQ-643">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-641" value="Initialize ADC Temperature Module" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1820" y="1360" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-646" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-643" target="wx0NTUSSTUv_tsJH7hlQ-645">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-643" value="Setup GPIO&lt;div&gt;Port E&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;Pins&lt;/span&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="1475" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-661" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-645" target="wx0NTUSSTUv_tsJH7hlQ-660">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-645" value="Setup ADC0 Module" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;resizable=1;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1820" y="1590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-660" value="END" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1820" y="1710" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-669" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-665" target="wx0NTUSSTUv_tsJH7hlQ-667">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-665" value="Get ADC&lt;div&gt;Temperature&lt;/div&gt;&lt;div&gt;Reading&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1360" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-666" value="Enable SS3 conversion or start sampling data from Ain0" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-670" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-667" target="wx0NTUSSTUv_tsJH7hlQ-666">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-667" value="&lt;b&gt;adcValue&lt;/b&gt;&lt;div&gt;(unsigned int)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1475" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-672" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" target="wx0NTUSSTUv_tsJH7hlQ-674" source="wx0NTUSSTUv_tsJH7hlQ-666">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2080" y="1650" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-678" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-674" target="wx0NTUSSTUv_tsJH7hlQ-677">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-679" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-678">
+          <mxGeometry x="-0.1077" y="4" relative="1" as="geometry">
+            <mxPoint x="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-674" value="Do we have&lt;div&gt;an&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;ADC sample&lt;/span&gt;&lt;div&gt;ready?&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1690" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-675" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-674" target="wx0NTUSSTUv_tsJH7hlQ-674">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2180" y="1730" />
+              <mxPoint x="2180" y="1670" />
+              <mxPoint x="2080" y="1670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-676" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-675">
+          <mxGeometry x="-0.8606" y="-2" relative="1" as="geometry">
+            <mxPoint x="5" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-681" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-677" target="wx0NTUSSTUv_tsJH7hlQ-680">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-677" value="Read the ADC coversion result from the SS3 FIFO queue" style="whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-683" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-680" target="wx0NTUSSTUv_tsJH7hlQ-682">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-680" value="Clear the conversion flag to allow sampling from ADC0 again" style="whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-682" value="Return &lt;b&gt;adcValue&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="2040" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-686" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-684" target="wx0NTUSSTUv_tsJH7hlQ-685">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-684" value="Convert ADC&lt;div&gt;Value to Celsius&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="2220.63" y="1360" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-688" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-685" target="wx0NTUSSTUv_tsJH7hlQ-687">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-685" value="&lt;b&gt;adcReading&lt;/b&gt;&lt;div&gt;(unsigned int)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="1480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-690" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-687" target="wx0NTUSSTUv_tsJH7hlQ-689">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-687" value="Positive Voltage Reference&lt;div&gt;(&lt;b&gt;vRefPos&lt;/b&gt;)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="1590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-696" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-689" target="wx0NTUSSTUv_tsJH7hlQ-695">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-689" value="&lt;div&gt;Negative Voltage Reference&lt;/div&gt;&lt;div&gt;(&lt;b&gt;vRefNeg&lt;/b&gt;)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="1700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-694" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-691" target="wx0NTUSSTUv_tsJH7hlQ-693">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-691" value="&lt;b&gt;tempCelsius&lt;/b&gt; =&amp;nbsp;147.5 -&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;i&gt;adcAdjusted&lt;/i&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="2215" y="2160" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-693" value="Return&amp;nbsp;&lt;b&gt;tempCelsius&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="2260" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-698" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-695" target="wx0NTUSSTUv_tsJH7hlQ-697">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-695" value="&lt;i&gt;voltageDiff&lt;/i&gt; = &lt;b&gt;vRefPos&lt;/b&gt; - &lt;b&gt;vRefNeg&lt;/b&gt;" style="whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="2211.26" y="1830" width="138.74" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-700" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-697" target="wx0NTUSSTUv_tsJH7hlQ-699">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-697" value="&lt;i&gt;adcMultFactor&lt;/i&gt; = 75 * &lt;i&gt;voltageDiff&lt;/i&gt;" style="whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="2191.26" y="1940" width="178.74" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-701" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-699" target="wx0NTUSSTUv_tsJH7hlQ-691">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-699" value="&lt;i&gt;adcAdjusted&lt;/i&gt; = (&lt;i&gt;adcMultFactor&lt;/i&gt; * &lt;b&gt;adcReading&lt;/b&gt;) / 4096" style="whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="2191.26" y="2050" width="178.74" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-702" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-703" target="wx0NTUSSTUv_tsJH7hlQ-707">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-703" value="Print String to LCD" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="65" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-722" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-705" target="wx0NTUSSTUv_tsJH7hlQ-721">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-705" value="Delay for 500 ms" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-716" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-707" target="wx0NTUSSTUv_tsJH7hlQ-714">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-707" value="&lt;b&gt;str &lt;/b&gt;(&lt;span style=&quot;background-color: initial;&quot;&gt;char array)&lt;/span&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-708" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-709" target="wx0NTUSSTUv_tsJH7hlQ-705">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-709" value="Send character dat to LCD &lt;span style=&quot;background-color: initial;&quot;&gt;in 4-bit mode&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="665" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-710" value="END" style="ellipse;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="980" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-719" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-713" target="wx0NTUSSTUv_tsJH7hlQ-718">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-724" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-719">
+          <mxGeometry x="-0.3615" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-725" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-713" target="wx0NTUSSTUv_tsJH7hlQ-710">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1960" y="470" />
+              <mxPoint x="1960" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-726" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;" vertex="1" connectable="0" parent="wx0NTUSSTUv_tsJH7hlQ-725">
+          <mxGeometry x="-0.7641" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-713" value="&lt;div&gt;if&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;not at end&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;of string and&lt;/span&gt;&lt;/div&gt;&lt;div&gt;i is less than 16&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="430" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-717" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-714" target="wx0NTUSSTUv_tsJH7hlQ-713">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-714" value="i = 0" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-720" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-718" target="wx0NTUSSTUv_tsJH7hlQ-709">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-718" value="ch = ith character from &lt;b&gt;str&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-723" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-721" target="wx0NTUSSTUv_tsJH7hlQ-713">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1780" y="910" />
+              <mxPoint x="1780" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-721" value="Increment i by 1" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-732" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-729" target="wx0NTUSSTUv_tsJH7hlQ-731">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-729" value="Fetch the latest temperature reading (as raw digital voltage) from PE3" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="95" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-734" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-731" target="wx0NTUSSTUv_tsJH7hlQ-733">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-731" value="Convert temperature from raw voltage reading to Celsius" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="205" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-736" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-733" target="wx0NTUSSTUv_tsJH7hlQ-735">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-733" value="Prepare the display string for the LCD" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-738" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-735" target="wx0NTUSSTUv_tsJH7hlQ-737">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-735" value="Set the cursor to the beginning of the first line" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-740" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-737" target="wx0NTUSSTUv_tsJH7hlQ-739">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-737" value="Display the string to the LCD (includes automatic handling of delays)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-741" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wx0NTUSSTUv_tsJH7hlQ-739" target="wx0NTUSSTUv_tsJH7hlQ-729">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx0NTUSSTUv_tsJH7hlQ-739" value="Delay for 3 seconds before reading the temperature sensor again" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

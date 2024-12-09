@@ -49,8 +49,11 @@ void ADC0_Module_Init(void) {
     // Set the sampling trigger to be software-triggered (manual)
     ADC0_EMUX_R &= ~ADC_EMUX_EM3_M;
 
-    // Select the Analog Input 0 channel on PE3
-    ADC0_SSMUX3_R = 0x00;
+    // Clear the SS3 MUX selector
+    ADC0_SSMUX3_R &= ~ADC_SSMUX3_MUX0_M;
+
+    // Select the Analog Input 0 (Ain0) channel on PE3
+    ADC0_SSMUX3_R += 0;
 
     // Take only 1 sample at a time from the internal temperature sensor
     // NOTE: The internal temperature sensor does not have a differential option
@@ -77,7 +80,7 @@ void ADC_Temp_Sensor_Init(void) {
 uint32_t Get_ADC_Temp_Reading(void) {
     uint32_t adcValue;
 
-    // Enable SS3 conversion or start sampling data from AN0
+    // Enable SS3 conversion or start sampling data from Ain0
     ADC0_PSSI_R = ADC_PSSI_SS3;
 
     // Poll the Raw Interrupt Status (RIS) until the ADC sample conversion has completed
