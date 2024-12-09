@@ -22,7 +22,7 @@ void Setup_Keypad_GPIO_Column_Pins(void) {
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R2;
 
     // Wait until Port C clock is fully initialized
-    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R2) == 0);
+    while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R2) == 0);
 
     // Unlock Port C configuration
     GPIO_PORTC_LOCK_R = GPIO_LOCK_KEY;
@@ -58,7 +58,7 @@ void Setup_Keypad_GPIO_Row_Pins(void) {
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
 
     // Wait until Port E clock is fully initialized
-    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R4) == 0);
+    while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R4) == 0);
 
     // Unlock Port E configuration
     GPIO_PORTE_LOCK_R = GPIO_LOCK_KEY;

@@ -38,7 +38,7 @@ void Setup_Port_A_Pins(void) {
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
 
     // Wait until Port A clock is fully initialized
-    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R0) == 0);
+    while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R0) == 0);
 
     // Unlock Port A configuration
     GPIO_PORTA_LOCK_R = GPIO_LOCK_KEY;

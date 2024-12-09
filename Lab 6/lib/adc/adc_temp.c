@@ -10,7 +10,7 @@ void Setup_Port_E_Pins(void) {
     SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
 
     // Wait until Port E clock is fully initialized
-    while ((SYSCTL_RCGCGPIO_R & SYSCTL_RCGCGPIO_R4) == 0);
+    while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R4) == 0);
 
     // Unlock Port E configuration
     GPIO_PORTE_LOCK_R = GPIO_LOCK_KEY;
@@ -35,7 +35,7 @@ void Setup_Port_E_Pins(void) {
 }
 
 
-// Setup ADC0 module, using internal temperature sensor
+// Setup ADC 0 module, using internal temperature sensor
 void ADC0_Module_Init(void) {
     // Enable clock for ADC module
     SYSCTL_RCGCADC_R |= SYSCTL_RCGCADC_R0;

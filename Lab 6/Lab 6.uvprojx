@@ -133,7 +133,7 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>1</Capability>
+            <Capability>0</Capability>
             <DriverSelection>-1</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
@@ -397,11 +397,6 @@
               <FileName>PLL.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\lib\pll\PLL.c</FilePath>
-            </File>
-            <File>
-              <FileName>Interrupt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lib\nvic\Interrupt.c</FilePath>
             </File>
             <File>
               <FileName>lcd_driver.c</FileName>
