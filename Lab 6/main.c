@@ -70,7 +70,7 @@ int main() {
         // Display the string to the LCD (includes automatic handling of delays)
         LCD_4Bits_OutputString(lineBuffer);
 
-        // Allow some delay to let the LCD display the character
+        // Allow some delay before reading the temperature sensor again
         SysTick_Wait_500ms(6);
     }
 }
