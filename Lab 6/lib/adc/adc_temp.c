@@ -40,6 +40,9 @@ void ADC0_Module_Init(void) {
     // Enable clock for ADC module
     SYSCTL_RCGCADC_R |= SYSCTL_RCGCADC_R0;
 
+    // Wait until ADC 0 clock is fully initialized
+    while ((SYSCTL_PRADC_R & SYSCTL_PRADC_R0) == 0);
+
     // Disable Sample Sequence 3 (SS3) during configuration
     ADC0_ACTSS_R &= ~ADC_ACTSS_ASEN3;
 
