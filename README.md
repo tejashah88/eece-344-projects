@@ -10,13 +10,18 @@ Each lab project has a `Documentation` folder which (mostly) includes the follow
 
 All projects are compiled using C90 mode without GNU extensions (although the Keil compiler does have some extras like slash comments) and all warnings are enabled (that is according to Keil).
 
+# Setup Instructions
+1. Make sure you have a TM4C123GH6PM Launchpad board.
+2. Follow the instructions in [Keil Setup.pdf](https://github.com/tejashah88/eece-344-projects/blob/main/Keil%20Setup.pdf)
+3. Download the UniFlash programming tool in case your TI board needs to be re-flashed. We encountered several issues regarding flashing new programs with Keil or when attempting to debug. It should work at least 80% of the time but it's annoying to say the least.
+
 ## Contributors
 * Lab Partners: Ethan Noritake & Tejas Shah
 * Primary Code Contributor: Tejas Shah
 
 ## References
 * [TM4C123GH6PM Datasheet](https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf)
-* [Bit Manipulation Macros](https://web2.qatar.cmu.edu/cs/15348/lectures/Lecture03.pdf)
+* [Bit Manipulation Macros](https://web2.qatar.cmu.edu/cs/15348/lectures/Lecture03.pdf) (page 19)
 
 ## Learning resources
 I took this class as of Fall 2024 and while the lectures and textbook are pretty good, I personally found the guides from [microcontrollerslab.com](https://microcontrollerslab.com/) to help a lot as supplemental information, especially with their diagrams and code examples. If you're studying for yourself, I do think the guides can get you a lot of headway on their own.
